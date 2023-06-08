@@ -1,0 +1,229 @@
+class Bars extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><img src="/production/images/logo.png" width="25px" /> <span>School level </span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/production/dashboard.html">Dashboard</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i>Students<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/production/student/student_registration.html">Register Student</a></li>
+                      <li><a href="/production/student/manage_student.html">Manage Student</a></li>
+                      <li><a href="/production/student/manage_attendance.html">Manage Attendance</a></li>
+                      <li><a href="/production/student/manage_assessment.html">Manage Assesment</a></li>
+                      <li><a href="/production/student/manage_transfer.html">Manage Transfer</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> Schools <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="media_gallery.html">Manage School</a></li>
+                      <li><a href="media_gallery.html">Manage School Infrastructure</a></li>
+                      <li><a href="media_gallery.html">Manage School textbook</a></li>
+                      <li><a href="media_gallery.html">School type</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> Teachers <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/production/teacher/manage_teachers.html">Manage Teachers</a></li>
+                      <li><a href="/production/teacher/manage_transfers.html">Manage Transfers</a></li>
+                      <li><a href="/production/teacher/manage_attendances.html">Manage Attendance</a></li>
+                      <li><a href="/production/teacher/manage_teachers_house.html">Manage Teachers Houses</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Infrastructure <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/production/infrastructure/manage_infrastructure.html">Manage Infrastructure</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>System Users <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fixed_sidebar.html">Manage users</a></li>
+                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>Live On</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bug"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">E-commerce</a></li>
+                      <li><a href="projects.html">Projects</a></li>
+                      <li><a href="project_detail.html">Project Detail</a></li>
+                      <li><a href="contacts.html">Contacts</a></li>
+                      <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-windows"></i> System Settings <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="page_403.html">Manage terms</a></li>
+                      <li><a href="page_404.html">Manage Classes</a></li>
+                      <li><a href="page_500.html">Manage Subjects</a></li>
+                      <li><a href="plain_page.html">Manage Eventory</a></li>
+                      <li><a href="login.html">Set Head Teacher</a></li>
+                      <li><a href="pricing_tables.html"> Set School type (sec or primary) </a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <img src="/production/images/user.png" alt=""> Petros kayange
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <a class="dropdown-item"  href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                  <a class="dropdown-item"  href="javascript:;">Help</a>
+                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+
+                <li role="presentation" class="nav-item dropdown open">
+                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="text-center">
+                        <a class="dropdown-item">
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        `
+    }
+}
+
+class Footer extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <footer class="main-footer">
+            <strong>Copyright &copy; ${new Date().toISOString().slice(0, 4)} <a href="">Education</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0.0
+            </div>
+        </footer>
+        `
+    }
+}
+customElements.define('app-footer',Footer)
+customElements.define('app-bars',Bars)
+
+var base_url = "http://0.0.0.0:8000/"
+
+function logout(){
+  sessionStorage.setItem("Authorization","")
+  sessionStorage.setItem("name","")
+  sessionStorage.setItem("username","")
+  sessionStorage.setItem("is_superuser","")
+  window.location = "/pages/login.html"
+}
