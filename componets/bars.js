@@ -32,10 +32,7 @@ class Bars extends HTMLElement{
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Schools <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="media_gallery.html">Manage School</a></li>
-                      <li><a href="media_gallery.html">Manage School Infrastructure</a></li>
-                      <li><a href="media_gallery.html">Manage School textbook</a></li>
-                      <li><a href="media_gallery.html">School type</a></li>
+                      <li><a href="/production/school/manage_school.html">Manage School</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Teachers <span class="fa fa-chevron-down"></span></a>
@@ -46,39 +43,33 @@ class Bars extends HTMLElement{
                       <li><a href="/production/teacher/manage_teachers_house.html">Manage Teachers Houses</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Infrastructure <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-building-o"></i> Infrastructure <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="/production/infrastructure/manage_infrastructure.html">Manage Infrastructure</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-clone"></i>System Users <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa fa-user"></i>System Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Manage users</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                      <li><a href="/production/users/manage_user.html">Manage users</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
               <div class="menu_section">
-                <h3>Live On</h3>
+                <h3>Other</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-file"></i> Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
+                      <li><a href="#">Cohort Report</a></li>
+                      <li><a href="/production/reports/statistical_returns.html"> Statistical Returns</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-windows"></i> System Settings <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-cog"></i> System Settings <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="page_403.html">Manage terms</a></li>
-                      <li><a href="page_404.html">Manage Classes</a></li>
-                      <li><a href="page_500.html">Manage Subjects</a></li>
-                      <li><a href="plain_page.html">Manage Eventory</a></li>
-                      <li><a href="login.html">Set Head Teacher</a></li>
-                      <li><a href="pricing_tables.html"> Set School type (sec or primary) </a></li>
+                      <li><a href="/production/settings/manage_terms.html">Manage terms</a></li>
+                      <li><a href="/production/settings/manage_classes.html">Manage Classes</a></li>
+                      <li><a href="/production/settings/manage_subjects.html">Manage Subjects</a></li>
+                      <li><a href="/production/settings/manage_bursary.html">Manage Bursary</a></li>
                     </ul>
                   </li>
                 </ul>
