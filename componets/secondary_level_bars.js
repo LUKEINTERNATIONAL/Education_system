@@ -18,7 +18,7 @@ class Bars extends HTMLElement{
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/production/dashboard.html">Dashboard</a></li>
+                      <li><a href="/production/school_level/secondary/dashboard.html">Dashboard</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i>Students<span class="fa fa-chevron-down"></span></a>
@@ -89,7 +89,7 @@ class Bars extends HTMLElement{
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/production">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
