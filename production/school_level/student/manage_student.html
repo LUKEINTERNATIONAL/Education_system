@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Education System</title>
+
+	<!-- Bootstrap -->
+	<link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- NProgress -->
+	<link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+	<!-- iCheck -->
+	<link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<!-- Datatables -->
+    
+    <link href="/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+	<!-- bootstrap-wysiwyg -->
+	<link href="/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+	<!-- Select2 -->
+	<link href="/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+	<!-- Switchery -->
+	<link href="/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+	<!-- starrr -->
+	<link href="/vendors/starrr/dist/starrr.css" rel="stylesheet">
+	<!-- bootstrap-daterangepicker -->
+	<link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+	<!-- Custom Theme Style -->
+	<link href="/build/css/custom.css" rel="stylesheet">
+
+	    
+			
+
+	<style>
+	    	.img-thumbnail:hover {
+									  filter: brightness(50%);
+									 }
+		   .custom-bg-color {
+								  background-color: #adb5bd;
+								}
+								
+	</style>
+
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<!-- bars plus nav -->
+			<app-bars></app-bars>
+			<!-- page content -->
+			
+			<div class="right_col" role="main">
+				<div class="">
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 ">
+							<div class="x_panel">
+								<div class="x_title">
+									<h2>Manage Student<small></small></h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<a class="dropdown-item" href="#">Settings 1</a>
+												<a class="dropdown-item" href="#">Settings 2</a>
+											</div>
+										</li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card-box table-responsive">
+												<table id="manage_student_table" class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%">
+													<thead class="bg-dark text-white">
+														<tr>
+														<th>Image</th>
+														<th>Name</th>
+														<th>Track Number</th>
+														<th>Class</th>
+														<th>Gender</th>
+														<th>Dropout</th>
+														<th>Orphan</th>
+														<th>Disability</th>
+														<th>Action</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Catherine Banda</td>
+															<td>34501</td>
+															<td>STD 1</td>
+															<td>F</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Jame Phiri</td>
+															<td>94234</td>
+															<td>STD 4</td>
+															<td>M</td>
+															<td><span class="badge badge-danger">Yes</span></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Maria Chabweraso</td>
+															<td>340</td>
+															<td>STD 8</td>
+															<td>F</td>
+															<td><span class="badge badge-danger">Yes</span></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Petros Kayange</td>
+															<td>434523</td>
+															<td>STD 3</td>
+															<td>F</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Justin Kamanga</td>
+															<td>3059</td>
+															<td>STD 7</td>
+															<td>M</td>
+															<td><span class="badge badge-danger">Yes</span></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Mecery Malolo</td>
+															<td>963</td>
+															<td>STD 1</td>
+															<td>F</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Gift Sikwese</td>
+															<td>324</td>
+															<td>STD 1</td>
+															<td>M</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Lucy Njala</td>
+															<td>9045</td>
+															<td>STD 1</td>
+															<td>F</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Natasha Kandulu</td>
+															<td>32423</td>
+															<td>STD 1</td>
+															<td>F</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Joy Banda</td>
+															<td>3245</td>
+															<td>STD 1</td>
+															<td>M</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+														<tr>
+															<td><img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50"></td>
+															<td>Paxton Munthali</td>
+															<td>92350</td>
+															<td>STD 5</td>
+															<td>M</td>
+															<td></td>
+															<td>No</td>
+															<td>No</td>
+															<td>
+																<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /page content -->
+
+
+
+
+
+
+				<!-- profile Modal -->
+				<div class="modal fade-modal-xl" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-xl">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" >Student profile</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+							<section style="background-color: #eee;">
+								<div class="container py-2 px-3">
+									<div class="row">
+										<div class="col-lg-4">
+											<div class="card mb-4 ">
+												<div class="custom-bg-color rounded-top" style="background-color: #adb5bd;">
+													<a href=""><img src="/production/images/camera (2).png" alt="avatar" class="img-thumbnail rounded-circle img-fluid" style="width: 30px; margin-left: 85%; margin-top: 20px;"></a>
+													<div class="card-body text-center ">
+														<img src="/production/images/user2.png" alt="avatar" class="rounded-circle img-fluid mb-2 border border-white border-4" style="width: 150px;">
+														<h5 class="my-3">Shammah Chigwazi</h5>
+													</div>
+												</div>
+												<div class="card-body text-center">
+													<p class="text-muted mb-2">Student</p>
+													<p class="text-muted ">St Peters, Primary, Mzuzu</p>
+													<div class="d-flex justify-content-center mb-4">
+														<div class="button-container">
+															<button class="btn btn-primary ms-1" data-toggle="modal" data-target="#searchStudentModal">Deactivate</button>
+															<button  class="btn btn-outline-primary ms-1" onclick="open_modal('moreInfoModal')">More</button>
+														</div>
+													</div>
+											</div>
+											</div>
+
+											<div class="card mb-4 mb-lg-0">
+												<div class="card-body">
+													<ul class="list-group list-group-flush rounded-3">
+														<li class="list-group-item justify-content-between align-items-center pb-3">
+														
+													<div class="row">
+															<div class="col-sm-8">
+															<p class="mb-0 fw-bold">Education background</p>
+															</div>
+															<div class="col-sm-2">
+															<a href="#" data-toggle="modal" data-target="#addEducationBackgroundModal"><img src="/production/images/plus.png" alt="add" class="img-thumbnail rounded-circle img-fluid" style="width: 30px;"></a>
+															</div>
+											
+															<div class="col-sm-2">
+															<a href="#" data-toggle="modal" data-target="#editEducationBackgroundModal"><img src="/production/images/edit-text.png" alt="add" class="img-thumbnail rounded-circle img-fluid" style="width: 30px;"></a>
+															</div>
+													</div>
+															</li>
+															<li class="list-group-item justify-content-between align-items-center pb-3">
+															
+													<div class="row">
+														<div class="col-sm-3">
+															<p class="mb-0"><img src="/production/images/university.png" alt="School" class="rounded-circle img-fluid" style="width: 50px;"></p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">St peters primary school <br><i>2015 - 2023</i></p>
+														</div>
+													</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="card mt-4">
+												<div class="card-body">
+														<ul class="list-group list-group-flush rounded-3">
+																		<li class="list-group-item justify-content-between align-items-center p-3">
+																		
+																	<div class="row">
+																		<div class="col-sm-8">
+																		<p class="mb-0 fw-bold">Transfer</p>
+																		</div>
+																		<div class="col-sm-2">
+																			<a href="#" data-toggle="modal" data-target="#addTransferModal"><img src="/production/images/plus.png" alt="add" class="img-thumbnail rounded-circle img-fluid" style="width: 30px;"></a>
+																		</div>
+														
+																		<div class="col-sm-2">
+																			<a href="#" data-toggle="modal" data-target="#editTransferModal"><img src="/production/images/edit-text.png" alt="add" class="img-thumbnail rounded-circle img-fluid" style="width: 30px;"></a>
+																		</div>
+																	</div>
+																		</li>
+																	<li class="list-group-item justify-content-between align-items-center pb-3">
+																		
+																		<p class="mb-2">St peters primmary school - Lunyangwa primary school</p>
+																	</li>
+														</ul>
+												</div>
+											</div>
+					
+										</div>
+										<div class="col-lg-8">
+											<div class="card mb-4">
+												<div class="card-body">
+														<div class="row">
+															<div class="col-sm-3">
+																<p class="mb-0 fw-bold">Student Name</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">Shammah Chigwazi</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">Student Code</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">P1000</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">School</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">St Peters Primary School</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">Class</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">Std 1</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">Email</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">chigwazishammah@gmail.com</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">Phone</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">088 849 1424</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+															<div class="col-sm-3">
+															<p class="mb-0 fw-bold">Address</p>
+															</div>
+															<div class="col-sm-9">
+															<p class="text-muted mb-0">St Peters, P.O Box 111, Mzuzu</p>
+															</div>
+														</div>
+														<hr>
+														<div class="row">
+														<div class="col-sm-9">
+															<button  class="btn btn-primary ms-1" onclick="open_modal('editPrifileInfoModal')">Edit profile</button>	
+														</div>
+														</div>
+												</div>
+											</div>
+												<div class="row">
+														<div class="col-md-6" style="height: 500px;">
+														<div class="card mb-4 mb-md-0">
+															
+															<div class="card-body">
+															<p class="mb-4"><b>View assesment results</b></p>
+                                                              <hr class="mb-4">
+															<button  class="btn btn-outline-primary mb-4 ms-1 " data-toggle="modal" data-target="#firstTermModal" style="width: 80%; border-radius: 20px;" >First term</button>
+
+                                                            <button  class="btn btn-outline-primary mb-4 ms-1" data-toggle="modal" data-target="#secondTermModal" style="width: 80%; border-radius: 20px;" >Second term</button>
+															
+															<button  class="btn btn-outline-primary  ms-1" data-toggle="modal" data-target="#thirdTermModal" style="width: 80%; border-radius: 20px;" >Third term</button>
+														   </div>
+														</div>
+														</div>
+														<div class="col-md-6">
+														<div class="card mb-4 mb-md-0">
+															<div class="card-body">
+															<p class="mb-4"><b>Student perfomance rating</b></p>
+															<hr>
+															<p class="mb-1" style="font-size: .77rem;">English</p>
+															<div class="progress rounded" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															  </div>
+															  <div style="text-align: right; margin-top: 5px;">80/100</div>
+															  
+															<p class="mt-2 mb-1" style="font-size: .77rem;">Math</p>
+															<div class="progress rounded" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															</div>
+															<div style="text-align: right; margin-top: 5px;">72/100</div>
+															<p class="mt-2 mb-1" style="font-size: .77rem;">Chichewa</p>
+															<div class="progress rounded" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															</div>
+															<div style="text-align: right; margin-top: 5px;">89/100</div>
+															<p class="mt-2 mb-1" style="font-size: .77rem;">Agiculture</p>
+															<div class="progress rounded" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															</div>
+															<div style="text-align: right; margin-top: 5px;">55/100</div>
+															<p class="mt-2 mb-1" style="font-size: .77rem;">Social Studies</p>
+															<div class="progress rounded mb-2" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															</div>
+															<div style="text-align: right; margin-top: 5px;">66/100</div>
+															<p class="mt-2 mb-1" style="font-size: .77rem;">Life skills</p>
+															<div class="progress rounded mb-2" style="height: 5px;">
+																<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
+																aria-valuemin="0" aria-valuemax="100"></div>
+															</div>
+															<div style="text-align: right; margin-top: 5px;">75/100</div>
+															</div>
+														</div>
+														</div>
+											</div>
+										</div>
+									</div>
+								</div>
+					
+							</section>
+				
+							<!-- Add profile Modal -->
+							<div class="modal fade" id="searchStudentModal" tabindex="-1" role="dialog" aria-labelledby="searchStudentModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+												<div class="modal-header">
+													<p class="modal-title" id="searchStudentModalLabel">Edit intro</p>
+													<button type="button" class="close"  aria-label="Close" onclick="close_modal('searchStudentModal')">
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div class="form-group">
+															<label for="firstName">First name:</label>
+															<input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+															<label for="lastName">Last name:</label>
+															<input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+															<label for="additionalName">Additional name:</label>
+															<input type="text" class="form-control" id="additionalName" placeholder="Enter additional name">
+															<h4 class="modal-title mt-4">Current school</h4>
+															<label for="schoolName">School name:</label>
+															<input type="text" class="form-control" id="schoolName" placeholder="Enter school name">
+															<label for="district">District:</label>
+															<input type="text" class="form-control" id="district" placeholder="Enter district">
+															<label for="schoolLevel">School level:</label>
+															<input type="text" class="form-control" id="schoolLevel" placeholder="Enter school level">
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-primary" onclick="saveInput()">Save</button>
+												</div>
+									</div>
+								</div>
+							</div>
+								
+							<!-- More Modal -->
+							<div class="modal fade show" id="moreInfoModal" tabindex="-1" role="dialog" aria-labelledby="attendanceModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="attendanceModalLabel">More information</h5>
+													<button type="button" class="close" aria-label="Close" onclick="close_modal('moreInfoModal')" >
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<form>
+														<div class="form-group">
+															<label for="className">Class level:</label>
+															<input type="text" class="form-control" id="className" placeholder="Enter class level">
+														</div>
+														<div class="form-group">
+															<label for="date">Date of birth:</label>
+															<input type="date" class="form-control" id="date">
+														</div>
+														<div class="form-group">
+															<label for="gender">Gender:</label>
+															<select class="form-control" id="gender">
+																<option value="male">Male</option>
+																<option value="female">Female</option>
+															</select>
+														</div>
+													</form>
+												</div>
+												<div class="modal-footer">
+													
+													<button type="button" class="btn btn-primary">Save</button>
+												</div>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- Edit profile Modal -->
+								<div class="modal fade show " id="editPrifileInfoModal" tabindex="-1" role="dialog" aria-labelledby="editPrifileInfoModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered " role="document">
+										<div class="modal-content overflow-x" >
+														<div class="modal-header">
+															<h5 class="modal-title" id="editPrifileInfoModalLabel">Edit profile information</h5>
+															<button type="button" class="close" aria-label="Close" onclick="close_modal('editPrifileInfoModal')" >
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+												<div class="modal-body" style="overflow-y: scroll;  height: 75vh;">
+													<form>
+															<div class="form-group">
+																<label for="studentName">Student name:</label>
+																<input type="text" class="form-control" id="studentName" value="Jame Phiri" placeholder="Enter student name">
+															</div>
+															<div class="form-group">
+																<label for="studentCode">Student code:</label>
+																<input type="text" class="form-control" id="studentCode" value="P3899" placeholder="Enter student code">
+															</div>
+															<div class="form-group">
+																<div class="form-group">
+																	<label for="schoolName">School:</label>
+																	<input type="text" class="form-control" id="schoolName" value="St peters primary" placeholder="Enter school name">
+																</div>
+																<div class="form-group">
+																	<label for="className">Class:</label>
+																	<input type="text" class="form-control" id="className" value="STD 1" placeholder="Enter class">
+																</div>
+
+																<div class="form-group">
+																	<label for="homeDistrict">Home district:</label>
+																	<input type="text" class="form-control" id="homeDistrict" value="Chitipa" placeholder="Enter home district">
+																</div>
+																<div class="form-group">
+																	<label for="homeVillage">Home village:</label>
+																	<input type="text" class="form-control" id="homeVillage" value="chalikira" placeholder="Enter home village">
+																</div>
+																<div class="form-group">
+																	<label for="homeTA">Home TA:</label>
+																	<input type="text" class="form-control" id="homeTA" value="Mwenecharikira" placeholder="Enter home TA">
+																</div>
+																<div class="form-group">
+																	<label for="currentDistrict">Current district:</label>
+																	<input type="text" class="form-control" id="currentDistrict" value="Mzimba" placeholder="Enter current village">
+																</div>
+																<div class="form-group">
+																	<label for="currentVillage">Current village:</label>
+																	<input type="text" class="form-control" id="currentVillage" value="Mziwayingwe" placeholder="Enter current village">
+																</div>
+																<div class="form-group">
+																	<label for="currentTA">Current TA:</label>
+																	<input type="text" class="form-control" id="currentTA" value="Kabunduli" placeholder="Enter current TA">
+																</div>
+																<div class="form-group">
+																	<label for="bursary">Type of bursary:</label>
+																	<input type="text" class="form-control" id="bursary" value="Government" placeholder="Enter type of bursary">
+																</div>
+																<div class="form-group">
+																	<h6 >Guardian information</h6>
+																		<div class="d-flex justify-content-center mb-4">
+																		<div style="display: block;">
+																			<label for="guardianName">Guardian name:</label>
+																			<input type="text" class="form-control" id="guardianName" value="Weston Phiri">
+																		</div>
+																		<div style="display: block; margin-left: 60px;">
+																			<label for="guardianPhone">Guardian phone:</label>
+																			<input type="phone" class="form-control" id="guardianPhone" value="265881122334">
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																		<label for="guardianGender">Guardian gender:</label>
+																		<select class="form-control" id="guardianGender">
+																		<option value=" ">M</option>
+																		<option value="male">Male</option>
+																		<option value="female">Female</option>
+																		</select>
+																</div>
+																<div class="form-group">
+																		<label for="guardianBornDate">Guardian date of birth:</label>
+																		<input type="date" class="form-control" value="15 June 1999" id="guardianBornDate">
+																</div>
+																<div class="form-group">
+																		<label for="repeater">Repeater:</label>
+																		<select class="form-control" id="repeater">
+																		<option value="yes">Yes</option>
+																		<option value="no">No</option>
+																		</select>
+																</div>
+																<div class="form-group">
+																		<label for="readmitted">Readmitted:</label>
+																		<select class="form-control" id="readmitted">
+																		<option value="yes">Yes</option>
+																		<option value="no">No</option>
+																		</select>
+																</div>
+															</div>
+															<div class="form-group">
+																<label for="studentOutcome">Student outcome:</label>
+																<input type="text" class="form-control" value="Dead" id="studentOutcome" placeholder="Enter student outcome">
+															</div>
+															<div class="form-group">
+																<label for="disabilityDescription">Disability description:</label>
+																<input type="text" class="form-control" id="disabilityDescription" value="Has one leg" placeholder="Enter disability description">
+															</div>
+															<div class="form-group">
+																<label for="closestLandMark">Closest land mark:</label>
+																<input type="text" class="form-control" id="closestLandMark" value="Mzuzu Stadium" placeholder="Enter closest land mark">
+															</div>
+															<div class="form-group">
+																<label for="enrolmentDate">Enrolment date:</label>
+																<input type="date" class="form-control" id="enrolmentDate" value="01 june 2019" placeholder="Enter enrolment date">
+															</div>
+															<div class="form-group">
+																<label for="fatherName">Father name:</label>
+																<input type="text" class="form-control" id="fatherName" value="Philip Phiri" placeholder="Enter father name">
+															</div>
+															<div class="form-group">
+																<label for="fatherDOB">Father date of birth:</label>
+																<input type="date" class="form-control" id="fatherDOB" value="12 October 1983" placeholder="Enter father date of birth">
+															</div>
+															<div class="form-group">
+																<label for="fatherPhone">Father phone:</label>
+																<input type="phone" class="form-control" id="fatherPhone" value="0888466238" placeholder="Enter father phone">
+															</div>
+															<div class="form-group">
+																<label for="motherName">Mother name:</label>
+																<input type="text" class="form-control" id="motherName" value="Monica Banda" placeholder="Enter mother name">
+															</div>
+															<div class="form-group">
+																<label for="motherDOB">Mother date of birth:</label>
+																<input type="date" class="form-control" id="motherDOB" value="02 January 1986" placeholder="Enter mother date of birth">
+															</div>
+															<div class="form-group">
+																<label for="motherPhone">Mother phone:</label>
+																<input type="phone" class="form-control" id="motherPhone" value="0888333447" placeholder="Enter mother phone">
+															</div>
+															<div class="form-group">
+																<label for="dropoutDate">Dropout date:</label>
+																<input type="date" class="form-control" id="dropoutDate" value="20 May 2023" placeholder="Enter dropout date">
+															</div>
+															<div class="form-group">
+																<label for="dropoutReason">Dropout reason:</label>
+																<input type="text" class="form-control" id="dropoutReason" value="Marriage" placeholder="Enter dropout reason">
+															</div>
+															<div class="form-group">
+																<label for="passThrough">Pass through (ECD):</label>
+																<select class="form-control" id="passThrough">
+																<option value="no">No</option>
+																<option value="yes">Yes</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label for="vulnerable">Vulnerable:</label>
+																<select class="form-control" id="vulnerable">
+																<option value="no">No</option>	
+																<option value="yes">Yes</option>
+																</select>
+															</div>
+															
+														</form>
+												</div>
+												<div class="modal-footer">
+												<button type="button" class="btn btn-primary">Save</button>
+												</div>
+										</div>
+									</div>
+								</div>
+				
+							<!-- Add Education background Modal -->
+								<div class="modal fade" id="addEducationBackgroundModal" tabindex="-1" role="dialog" aria-labelledby="addEducationBackgroundModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+												<div class="modal-header">
+															<h5 class="modal-title" id="addEducationBackgroundModalLabel">Add education</h5>
+															<button type="button" class="close" aria-label="Close" onclick="close_modal('addEducationBackgroundModal')">
+																<span aria-hidden="true">&times;</span>
+															</button>
+													</div>
+													<div class="modal-body">
+															<form>
+																<div class="form-group">
+																	<label for="className">School:</label>
+																	<input type="text" class="form-control" id="className" placeholder="Enter school name">
+																</div>
+																<div class="form-group">
+																	<label for="Certificate">Certificate:</label>
+																	<select class="form-control" id="Certificate" placeholder="certificate">
+																	<option value="">certificate</option>
+																	<option value="PSLC">PSLC</option>
+																	<option value="JCE">JCE</option>
+																	<option value="MSCE">MSCE</option>
+																	</select>
+																</div>
+																<div class="form-group">
+																	<label for="className">Start date:</label>
+																	<div class="d-flex justify-content-center mb-4">
+																	<select class="form-control" id="monthInput" placeholder="Month">
+																	<option value="">Month</option>
+																	<option value="January">January</option>
+																	<option value="February">February</option>
+																	<option value="March">March</option>
+																	<option value="April">April</option>
+																	<option value="May">May</option>
+																	<option value="June">June</option>
+																	<option value="July">July</option>
+																	<option value="August">August</option>
+																	<option value="September">September</option>
+																	<option value="October">October</option>
+																	<option value="November">November</option>
+																	<option value="December">December</option>
+																	</select>                 
+																	<select class="form-control ml-2" id="yearInput" placeholder="Year">
+																	<option value="">Year</option>
+																	<option value="2010">2010</option>
+																	<option value="2011">2011</option>
+																	<option value="2012">2012</option>
+																	<option value="2013">2013</option>
+																	<option value="2014">2014</option>
+																	<option value="2015">2015</option>
+																	<option value="2016">2016</option>
+																	<option value="2017">2017</option>
+																	<option value="2018">2018</option>
+																	<option value="2019">2019</option>
+																	<option value="2020">2020</option>
+																	<option value="2021">2021</option>
+																	<option value="2022">2022</option>
+																	<option value="2023">2023</option>
+																	<option value="2024">2024</option>
+																	<option value="2025">2025</option>
+																	<option value="2026">2026</option>
+																	<option value="2027">2027</option>
+																	<option value="2028">2028</option>
+																	<option value="2029">2029</option>
+																	<option value="2030">2030</option>
+																	</select>          
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="className">End date (or expected):</label>
+																	<div class="d-flex justify-content-center mb-4">
+																	<select class="form-control" id="monthInput" placeholder="Month">
+																	<option value="">Month</option>
+																	<option value="January">January</option>
+																	<option value="February">February</option>
+																	<option value="March">March</option>
+																	<option value="April">April</option>
+																	<option value="May">May</option>
+																	<option value="June">June</option>
+																	<option value="July">July</option>
+																	<option value="August">August</option>
+																	<option value="September">September</option>
+																	<option value="October">October</option>
+																	<option value="November">November</option>
+																	<option value="December">December</option>
+																	</select>          
+																	<select class="form-control ml-2" id="yearInput" placeholder="Year">
+																	<option value="">Year</option>
+																	<option value="2010">2010</option>
+																	<option value="2011">2011</option>
+																	<option value="2012">2012</option>
+																	<option value="2013">2013</option>
+																	<option value="2014">2014</option>
+																	<option value="2015">2015</option>
+																	<option value="2016">2016</option>
+																	<option value="2017">2017</option>
+																	<option value="2018">2018</option>
+																	<option value="2019">2019</option>
+																	<option value="2020">2020</option>
+																	<option value="2021">2021</option>
+																	<option value="2022">2022</option>
+																	<option value="2023">2023</option>
+																	<option value="2024">2024</option>
+																	<option value="2025">2025</option>
+																	<option value="2026">2026</option>
+																	<option value="2027">2027</option>
+																	<option value="2028">2028</option>
+																	<option value="2029">2029</option>
+																	<option value="2030">2030</option>
+																	</select>
+																	</div>
+																</div>
+															</form>
+													</div>
+													<div class="modal-footer">
+														
+														<button type="button" class="btn btn-primary">Save</button>
+													</div>
+										</div>
+									</div>
+								</div>
+						</div>
+				
+				
+					<!-- Edit Education background Modal -->
+						<div class="modal fade" id="editEducationBackgroundModal" tabindex="-1" role="dialog" aria-labelledby="editEducationBackgroundModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="editEducationBackgroundModalLabel">Edit education</h5>
+										<button type="button" class="close" aria-label="Close" onclick="close_modal('editEducationBackgroundModal')">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form>
+											<div class="form-group">
+												<label for="className">School:</label>
+												<input type="text" class="form-control" id="className" placeholder="Enter school name">
+											</div>
+											<div class="form-group">
+												<label for="Certificate">Certificate:</label>
+												<select class="form-control" id="Certificate" placeholder="certificate">
+												<option value="">certificate</option>
+												<option value="PSLC">PSLC</option>
+												<option value="JCE">JCE</option>
+												<option value="MSCE">MSCE</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label for="className">Start date:</label>
+												<div class="d-flex justify-content-center mb-4">
+												<select class="form-control" id="monthInput" placeholder="Month">
+												<option value="">June</option>
+												<option value="January">January</option>
+												<option value="February">February</option>
+												<option value="March">March</option>
+												<option value="April">April</option>
+												<option value="May">May</option>
+												<option value="June">June</option>
+												<option value="July">July</option>
+												<option value="August">August</option>
+												<option value="September">September</option>
+												<option value="October">October</option>
+												<option value="November">November</option>
+												<option value="December">December</option>
+												</select>                 
+												<select class="form-control ml-2" id="yearInput" placeholder="Year">
+												<option value="">2023</option>
+												<option value="2010">2010</option>
+												<option value="2011">2011</option>
+												<option value="2012">2012</option>
+												<option value="2013">2013</option>
+												<option value="2014">2014</option>
+												<option value="2015">2015</option>
+												<option value="2016">2016</option>
+												<option value="2017">2017</option>
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+												<option value="2022">2022</option>
+												<option value="2023">2023</option>
+												<option value="2024">2024</option>
+												<option value="2025">2025</option>
+												<option value="2026">2026</option>
+												<option value="2027">2027</option>
+												<option value="2028">2028</option>
+												<option value="2029">2029</option>
+												<option value="2030">2030</option>
+												</select>          
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="className">End date (or expected):</label>
+												<div class="d-flex justify-content-center mb-4">
+												<select class="form-control" id="monthInput" placeholder="Month">
+												<option value="">June</option>
+												<option value="January">January</option>
+												<option value="February">February</option>
+												<option value="March">March</option>
+												<option value="April">April</option>
+												<option value="May">May</option>
+												<option value="June">June</option>
+												<option value="July">July</option>
+												<option value="August">August</option>
+												<option value="September">September</option>
+												<option value="October">October</option>
+												<option value="November">November</option>
+												<option value="December">December</option>
+												</select>          
+												<select class="form-control ml-2" id="yearInput" placeholder="Year">
+												<option value="">2027</option>
+												<option value="2010">2010</option>
+												<option value="2011">2011</option>
+												<option value="2012">2012</option>
+												<option value="2013">2013</option>
+												<option value="2014">2014</option>
+												<option value="2015">2015</option>
+												<option value="2016">2016</option>
+												<option value="2017">2017</option>
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+												<option value="2022">2022</option>
+												<option value="2023">2023</option>
+												<option value="2024">2024</option>
+												<option value="2025">2025</option>
+												<option value="2026">2026</option>
+												<option value="2027">2027</option>
+												<option value="2028">2028</option>
+												<option value="2029">2029</option>
+												<option value="2030">2030</option>
+												</select>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+
+										<button type="button" class="btn btn-primary">Save</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+						<!-- Add transfer Modal -->
+						<div class="modal fade" id="addTransferModal" tabindex="-1" role="dialog" aria-labelledby="addTransferModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="addTransferModalLabel">Add Transfer</h5>
+											<button type="button" class="close" aria-label="Close" onclick="close_modal('addTransferModal')">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="form-group">
+													<label for="previousSchool">Previous school:</label>
+													<input type="text" class="form-control" id="previousSchool" placeholder="Enter school name">
+												</div>
+												<div class="form-group">
+													<label for="currentSchool">Current school:</label>
+													<input type="text" class="form-control" id="currentSchool" placeholder="Enter school name">
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">Save</button>
+										</div>
+								</div>
+							</div>
+						</div>
+				
+						<!-- Edit transfer Modal -->
+						<div class="modal fade" id="editTransferModal" tabindex="-1" role="dialog" aria-labelledby="editTransferModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+											<div class="modal-header">
+													<h5 class="modal-title" id="editTransferModalLabel">Edit Transfer</h5>
+													<button type="button" class="close" aria-label="Close" onclick="close_modal('editTransferModal')">
+													<span aria-hidden="true">&times;</span>
+													</button>
+											</div>
+											<div class="modal-body">
+												<form>
+													<div class="form-group">
+														<label for="previousSchool">Previous school:</label>
+														<input type="text" class="form-control" id="previousSchool"value="St Peters primary" placeholder="Enter school name">
+													</div>
+													<div class="form-group">
+														<label for="currentSchool">Current school:</label>
+														<input type="text" class="form-control" id="currentSchool" placeholder="Enter school name">
+													</div>
+												</form>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary">Save</button>
+											</div>
+									</div>
+								</div>
+							</div>
+				
+				</div>
+
+
+       </div>
+   </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- view assessment results modal -->
+   <div class="modal fade bs-example-modal-xl" id="term" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header" style="padding: 0.4rem 1rem;">
+				<h5 class="modal-title" id="term">Final Student Assessment</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="x_content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card-box table-responsive">
+								<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+									<thead>
+										<tr>
+										<th>Subject</th>
+										<th>Average Continuous(%)</th>
+										<th>Final Assessment (%)</th>
+										<th>Final + Continuous (%)</th>
+										<th>Comment</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Chichewa</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Engilish</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Maths</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Biology</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Physcal Science</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>Agricuture</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>History</td>
+											<td>50%</td>
+											<td>60%</td>
+											<td>55%</td>
+											<td></td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer" style="padding: 0.3rem;">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+			<!-- Small modal -->
+				<div class="modal fade bs-example-modal-xl" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-xl">
+					<div class="modal-content">
+
+					<div class="modal-header" style="padding: 0.4rem 1rem;">
+						<h5 class="modal-title" id="myModalLabel2">More Student details</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-6">
+								<ul class="legend list-unstyled" style="font-size: 14px;">
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Home District:</span> Chitipa</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square grey"></i></span> <span class="name"><b><span style="color:#000">Home Village:</span> Chalikira</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Home TA:</span> Mwenecharikira</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square green"></i></span> <span class="name"><b><span style="color:#000">Current District:</span> Mzimba</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Current Village:</span> Mziwayingwe</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square grey"></i></span> <span class="name"><b><span style="color:#000">Current TA:</span> Kabunduli</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Type of bursary:</span> Government</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square green"></i></span> <span class="name"><b><span style="color:#000">Guardian Phone:</span> 26599900055</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Guardian Name:</span> Weston Phiri</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Guardian Gender:</span> M</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Guardian Birthdate:</span> 15 June 1999 </b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Repeater:</span> Yes </b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Readmitted:</span> No </b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Student outcome:</span> Dead </b></span>
+									</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-sm-6">
+								<ul class="legend list-unstyled" style="font-size: 14px;">
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Disability Description:</span> Has one leg</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square green"></i></span> <span class="name"><b><span style="color:#000">Closest land mark:</span> Mzuzu Stadium</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Enrolment Date:</span> 01 June 2019</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square grey"></i></span> <span class="name"><b><span style="color:#000">Father name:</span> Geodge Jere</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Father Birthdate:</span> 01 June 2019</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square green"></i></span> <span class="name"><b><span style="color:#000">Father Phone #:</span> 0888832974</b></span>
+									</p>
+									</li>
+									
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square dark"></i></span> <span class="name"><b><span style="color:#000">Monther Name:</span> Monica Kandulu</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square grey"></i></span> <span class="name"><b><span style="color:#000">Mother Birthdate:</span> 01 June 2019</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Mother phone #:</span> 088166250</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Enrolment Date:</span> 20 May 2023</b></span>
+									</p>
+									</li> 
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Droupout Reason:</span> Marriage</b></span>
+									</p>
+									</li> 
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Pass through (ECD):</span> No</b></span>
+									</p>
+									</li>
+									<li>
+									<p>
+										<span class="icon"><i class="fa fa-square blue"></i></span> <span class="name"><b><span style="color:#000">Vulnerable:</span> No</b></span>
+									</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer" style="padding: 0.3rem;">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+
+					</div>
+				</div>
+				</div>
+				<!-- /modals -->	
+			<!-- footer content -->
+			<app-footer></app-footer>
+			<!-- /footer content --> 
+		</div>
+	</div>
+
+	<div id='background_color'>
+
+	</div>
+	<script src="/componets/bars.js"></script>
+	<!-- jQuery -->
+	<script src="/vendors/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- FastClick -->
+	<script src="/vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="/vendors/nprogress/nprogress.js"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<!-- iCheck -->
+	<script src="/vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables -->
+    <script src="/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="/vendors/pdfmake/build/vfs_fonts.js"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script src="/vendors/moment/min/moment.min.js"></script>
+	<script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- bootstrap-wysiwyg -->
+	<script src="/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script src="/vendors/google-code-prettify/src/prettify.js"></script>
+	<!-- jQuery Tags Input -->
+	<script src="/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<!-- Switchery -->
+	<script src="/vendors/switchery/dist/switchery.min.js"></script>
+	<!-- Select2 -->
+	<script src="/vendors/select2/dist/js/select2.full.min.js"></script>
+	<!-- Parsley -->
+	<script src="/vendors/parsleyjs/dist/parsley.min.js"></script>
+	<!-- Autosize -->
+	<script src="/vendors/autosize/dist/autosize.min.js"></script>
+	<!-- jQuery autocomplete -->
+	<script src="/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<!-- starrr -->
+	<script src="/vendors/starrr/dist/starrr.js"></script>
+	<!-- Custom Theme Scripts -->
+	<script src="/build/js/custom.min.js"></script>
+	<script src="/production/js/data.js"></script>
+
+	<script>
+		function close_modal(id){
+			$('#'+id).attr('style','display:none');
+		}
+		function open_modal(id){
+			
+			$('#'+id).attr('style','display:block');
+		}
+
+
+  function display_data(data) {
+    var datatable = $("#manage_student_table").dataTable().api();
+    datatable.clear();
+    datatable.rows.add(data);
+    datatable.draw();
+  };
+
+
+  $(function() {
+    $("#manage_student_table").DataTable()
+  });
+if (sessionStorage.getItem('school_type')=='primary')
+	display_data(student_primary_data)
+else
+	display_data(student_secondary_data)
+	</script>
+
+</body></html>
