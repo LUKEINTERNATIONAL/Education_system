@@ -73,7 +73,7 @@
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="card-box table-responsive">
-												<table id="datatable-responsive" class="table table-striped table-bordered table-hover dt-responsive nowrap" cellspacing="0" width="100%">
+												<table id="datatable-responsive" class="table table-striped table-bordered table-rounded table-hover dt-responsive nowrap" cellspacing="0" width="100%">
 													<thead class="bg-dark text-white">
 														<tr>
 														<th>Image</th>
@@ -92,7 +92,12 @@
 													</thead>
 													<tbody>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>CB</span>
+																</div>
+															  </td>
 															<td>Catherine Banda</td>
 															<td>34501</td>
 															<td>STD 1</td>
@@ -110,7 +115,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>JP</span>
+																</div>
+															  </td>
 															<td>Jame Phiri</td>
 															<td>94234</td>
 															<td>STD 4</td>
@@ -128,7 +138,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>MC</span>
+																</div>
+															  </td>
 															<td>Maria Chabweraso</td>
 															<td>340</td>
 															<td>STD 8</td>
@@ -146,7 +161,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>PK</span>
+																</div>
+															  </td>
 															<td>Petros Kayange</td>
 															<td>434523</td>
 															<td>STD 3</td>
@@ -164,7 +184,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>JK</span>
+																</div>
+															  </td>
 															<td>Justin Kamanga</td>
 															<td>3059</td>
 															<td>STD 7</td>
@@ -182,7 +207,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>MM</span>
+																</div>
+															  </td>
 															<td>Mecery Malolo</td>
 															<td>963</td>
 															<td>STD 1</td>
@@ -200,7 +230,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>GS</span>
+																</div>
+															  </td>
 															<td>Gift Sikwese</td>
 															<td>324</td>
 															<td>STD 1</td>
@@ -218,7 +253,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>LN</span>
+																</div>
+															  </td>
 															<td>Lucy Njala</td>
 															<td>9045</td>
 															<td>STD 1</td>
@@ -236,7 +276,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>NK</span>
+																</div>
+															  </td>
 															<td>Natasha Kandulu</td>
 															<td>32423</td>
 															<td>STD 1</td>
@@ -254,7 +299,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>JB</span>
+																</div>
+															  </td>
 															<td>Joy Banda</td>
 															<td>3245</td>
 															<td>STD 1</td>
@@ -272,7 +322,12 @@
 															</td>
 														</tr>
 														<tr>
-															<td><img src="/production/images/user.png" alt="" width="50"></td>
+															<td>
+																<div class="avatar">
+																  <!--<img src="/production/images/user.png" alt="" width="50">-->
+																  <span>PM</span>
+																</div>
+															  </td>
 															<td>Paxton Munthali</td>
 															<td>92350</td>
 															<td>STD 5</td>
@@ -528,5 +583,22 @@
 	<script src="/vendors/starrr/dist/starrr.js"></script>
 	<!-- Custom Theme Scripts -->
 	<script src="/build/js/custom.min.js"></script>
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+			color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+	
+		document.addEventListener('DOMContentLoaded', function() {
+		  var avatars = document.querySelectorAll('.avatar');
+		  avatars.forEach(function(avatar) {
+			avatar.style.backgroundColor = getRandomColor();
+		  });
+		});
+			</script>
 
 </body></html>

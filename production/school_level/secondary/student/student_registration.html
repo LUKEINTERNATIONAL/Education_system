@@ -38,8 +38,14 @@
     <link href="/build/css/custom.css" rel="stylesheet">
     <style>
       .form_wizard .stepContainer {
-          overflow-x: unset
+          overflow-x: unset;
       }
+
+      #step-2{
+        overflow: unset;
+        max-height: 600px;
+      }
+
     </style>
   </head>
 
@@ -211,7 +217,16 @@
                             </div>
                             <div class="col-md-4 col-sm-2  form-group has-feedback">
                               <select class="form-control has-feedback-left" id="inputSuccess2">
-                                <option disabled selected value="">Tracking Number</option>
+                                <option disabled selected value="">Code Number</option>
+                                <option value="AK">M0345</option>
+                                <option value="HI">Mz83423</option>
+                                <option value="CA">Z832</option>
+                              </select>
+                              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-md-4 col-sm-2  form-group has-feedback">
+                              <select class="form-control has-feedback-left" id="inputSuccess2">
+                                <option disabled selected value="">Blank for now</option>
                                 <option value="AK">M0345</option>
                                 <option value="HI">Mz83423</option>
                                 <option value="CA">Z832</option>
@@ -233,8 +248,8 @@
                               <div class="col-md-12 col-sm-12 form-group has-feedback">
                                 <p>
                                   <label style="margin-right:60px; font-weight:700;color:#424242">Has Disablity *: </label>
-                                  Yes: <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                                  Yes: <input type="radio" class="flat" name="disabled" id="genderM" value="M" checked="" required /> 
+                                  No: <input type="radio" class="flat" name="disabled" id="genderF" value="F" />
                                 </p>
                               </div>
                             </div>
@@ -242,8 +257,8 @@
                               <div class="col-md-12 col-sm-12 form-group has-feedback">
                                 <p>
                                   <label style="margin-right:100px; font-weight:700;color:#424242">Opharn *: </label>
-                                  Yes: <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                                  Yes: <input type="radio" class="flat" name="opharn" id="genderM" value="M" checked="" required /> 
+                                  No: <input type="radio" class="flat" name="opharn" id="genderF" value="F" />
                                 </p>
                               </div>
                             </div>
@@ -251,8 +266,8 @@
                               <div class="col-md-12 col-sm-12 form-group has-feedback">
                                 <p>
                                   <label style="margin-right:75px; font-weight:700;color:#424242">On Bursary*: </label>
-                                  Yes: <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                                  Yes: <input type="radio" class="flat" name="gender3" id="genderM" value="M" checked="" required /> 
+                                  No: <input type="radio" class="flat" name="gender3" id="genderF" value="F" />
                                 </p>
                               </div>
                             </div>
@@ -279,24 +294,38 @@
                               </select>
                               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
-                            <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness">
-                              <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                          
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Specify Illness</label>
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <span class="fa fa-phone" aria-hidden="true"></span>
+                                </span>
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness">
+                              </div>
                             </div>
-                            <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="Attach Supporting Document">
-                              <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            
+                            <!--<div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Attach Supporting Document</label>
+                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
+                              --<span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>--
+                            </div>-->
+                            
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Bursary Type</label>
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <span class="fa fa-envelope" aria-hidden="true"></span>
+                                </span>
+                                <select class="form-control has-feedback-left" id="inputSuccess2">
+                                  <option disabled selected value="">Type Bursary</option>
+                                  <option value="AK">Government</option>
+                                  <option value="HI">Luke International</option>
+                                </select>
+                              </div>
                             </div>
-                             <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <select class="form-control has-feedback-left" id="inputSuccess2">
-                                <option disabled selected value="">Type Bursary</option>
-                                <option value="AK">Government</option>
-                                <option value="HI">Luke International</option>
-                              </select>
-                              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                            </div>
+                            
                           </div>
-                        
                         </form>
 
                       </div>
@@ -330,9 +359,22 @@
                               <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Mother Email">
                               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
+                        
+                              <div class="col-md-4 col-sm-2 form-group has-feedback">
+                                <select class="form-control has-feedback-left" id="inputSuccess7">
+                                  <option disabled selected value="">Occupation</option>
+                                  <option value="AK">Employed</option>
+                                  <option value="HI">Unemployed</option>
+                                  <option value="CA">Business</option>
+                                </select>
+                                <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                              </div>
+                      
+                            
                           </div>
-                          <div style="margin: 30px;">
+                          <div style="margin: 20px;">
                           </div>
+
                           <h2 class="StepTitle">Register Father</h2>
                           <div class="row">
                             <div class="col-md-4 col-sm-2  form-group has-feedback">
@@ -362,8 +404,20 @@
                               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
                           </div>
-                          <div style="margin: 30px;">
+                          <div class="row">
+                          <div class="col-md-4 col-sm-2 form-group has-feedback">
+                            <select class="form-control has-feedback-left" id="inputSuccess">
+                              <option disabled selected value="">Occupation</option>
+                              <option value="AK">Employed</option>
+                              <option value="HI">Unemployed</option>
+                              <option value="CA">Business</option>
+                            </select>
+                            <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                           </div>
+                          </div>
+
+
+                          
                           <h2 class="StepTitle">Register Guardian</h2>
                           <div class="row">
                             <div class="col-md-4 col-sm-2  form-group has-feedback">
@@ -393,8 +447,23 @@
                               <input type="email" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Guardian Email">
                               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
+                            
+                          </div>
+                          <div class="row">
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <select class="form-control has-feedback-left" id="inputSuccess7">
+                                <option disabled selected value="Occupation">Occupation</option>
+                                <option value="AK">Employed</option>
+                                <option value="HI">Unemployed</option>
+                                <option value="CA">Business</option>
+                              </select>
+                              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                          </div>
+                          <div style="margin: 60px;">
                           </div>
                       </div>
+
                       <div id="step-3">
                         <h2 class="StepTitle">Capture Image</h2>
                         <!-- image cropping -->
@@ -790,6 +859,7 @@
                               </div>
                               <div class="x_content">
                                 <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+
                                 <form action="/production/student/student_registration.html" class="dropzone"></form>
                                 <br />
                                 <br />
