@@ -45,9 +45,9 @@
     </style>
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md" id="dash">
     <div class="container body">
-      <div class="main_container">
+      <div class="main_container" id="chartContainer">
         
         <!-- bars plus nav -->
         <app-bars></app-bars>
@@ -55,7 +55,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
-          <div class="row tile_count">
+          <div class="row tile_count" id="row_first">
             <div class="col-md-2 col-sm-6">
               <div class="tile_stats_count">
                   <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
@@ -101,13 +101,13 @@
         </div>
           <!-- /top tiles -->
 
-          <div class="row">
+          <div class="row" id="row_second">
             <div class="col-md-6 col-sm-6 ">
               <div class="dashboard_graph">
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h5>Students  <small>(Attendace vs Enrolment)</small> </h5>
+                    <h5>Students  <small>(Female vs Male)</small> </h5>
                   </div>
                   <div class="col-md-6">
                     <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
@@ -130,7 +130,7 @@
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h5>Students  <small>(Female vs Male)</small>  </h5>
+                    <h5>Students  <small>(Attendance vs Enrollment)</small>  </h5>
                   </div>
                   <div class="col-md-6">
                     <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
@@ -151,9 +151,7 @@
           </div>
           <br />
 
-          <div class="row">
-
-
+          <div class="row" id="row_third">
             <div class="col-md-4 col-sm-4 ">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
@@ -225,7 +223,7 @@
                   </div>
                   <div class="widget_summary">
                     <div class="w_left w_25">
-                      <span>STD 3</span>
+                      <span>FORM 3</span>
                     </div>
                     <div class="w_center w_55">
                       <div class="progress">
@@ -235,7 +233,7 @@
                       </div>
                     </div>
                     <div class="w_right w_20">
-                      <span>5%</span>
+                      <span>6%</span>
                     </div>
                     <div class="clearfix"></div>
                   </div>
@@ -346,12 +344,12 @@
                 <div class="x_content">
                   <div class="dashboard-widget-content" style="height: 120px; font-size: 17px; padding-bottom: 10px;">
                     <ul class="quick-list">
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Form 1 (7 M / 5 F)</a>
+                      <li><i class="fa fa-bar-chart"></i><a href="#">Form1 (7 M / 5 F)</a>
                       </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Form 2 (8 M / 3 F)</a>
+                      <li><i class="fa fa-bar-chart"></i><a href="#">Form2 (8 M / 3 F)</a>
                       </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Form 3 (7 M / 7 F)</a> </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Form 4 (10 M / 5 F)</a>
+                      <li><i class="fa fa-bar-chart"></i><a href="#">Form3 (7 M / 7 F)</a> </li>
+                      <li><i class="fa fa-bar-chart"></i><a href="#">Form4 (10 M / 5 F)</a>
                       </li>
                     </ul>
 
@@ -424,12 +422,12 @@
     <script src="/build/js/custom.js"></script>
 
 
-<script>
+<script>/*
   $(function () {
-    /* ChartJS
+    * ChartJS
      * -------
      * Here we will create a few charts using ChartJS
-     */
+     *
 
     //--------------
     //- AREA CHART -
@@ -504,11 +502,11 @@
 	
 
 <script>
-  $(function () {
-    /* ChartJS
+  /*$(function () {
+    * ChartJS
      * -------
      * Here we will create a few charts using ChartJS
-     */
+     *
 
     //--------------
     //- AREA CHART -
@@ -577,6 +575,405 @@
 const urlParams = new URLSearchParams(window.location.search);
  sessionStorage.setItem('school_type', urlParams.get('school_type'));
 
+*/</script>
+
+
+
+
+
+
+
+
+
+<script>/*
+  $(function () {
+    * ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     *
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+
+    var areaChartDataPrimary = {
+      labels  : ['STD 1', 'STD 2', 'STD3','STD4','STD5','STD6','STD7','STD8'],
+      datasets: [
+        {
+          label               : 'Attendace',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [28, 48, 40, 19, 86, 27, 90,70]
+        },
+        {
+          label               : 'Enrolment',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81, 56, 55, 40,40]
+        }
+      ]
+    }
+
+    var areaChartDataSecondary = {
+      labels  : ['STD 1', 'STD 2', 'STD3','STD4','STD5','STD6','STD7','STD8'],
+      datasets: [
+        {
+          label               : 'Attendace',
+          backgroundColor     : 'rgba(26,187,156,0.9)',
+          borderColor         : 'rgba(26,187,156,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(26,187,156,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(26,187,156,1)',
+          data                : [28, 48, 40, 19, 86, 27, 90,70]
+        },
+        {
+          label               : 'Enrolment',
+          backgroundColor     : 'rgba(60,141,188, 0.9)',
+          borderColor         : 'rgba(60,141,188, 0.8)',
+          pointRadius         : false,
+          pointColor          : 'rgba(60,141,188, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81, 56, 55, 40,40]
+        }
+      ]
+    }
+
+    var schoolType = sessionStorage.getItem('school_type');
+
+    var areaChartData = schoolType === 'secondary' ? areaChartDataSecondary : areaChartDataPrimary;
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $('#stackChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false,
+      scales: {
+        xAxes: [{
+          stacked: true // this should be set to make the bars stacked
+        }],
+        yAxes: [{
+          stacked: true // this also..
+        }]
+      }
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    })
+
+  })
+
+  const urlParams = new URLSearchParams(window.location.search);
+  sessionStorage.setItem('school_type', urlParams.get('school_type'));
+*/</script>
+
+<script>/*
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     *
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+
+    var areaChartData = {
+      labels  : ['STD 1', 'STD 2', 'STD3','STD4','STD5','STD6','STD7','STD8'],
+      datasets: [
+        {
+          label               : 'Attendace',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [28, 48, 40, 19, 86, 27, 90,70]
+        },
+        {
+          label               : 'Enrolment',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81, 56, 55, 40,40]
+        }
+      ]
+    }
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $('#stackChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false,
+      scales: {
+        xAxes: [{
+          stacked: true // this should be set to make the bars stacked
+        }],
+        yAxes: [{
+          stacked: true // this also..
+        }]
+      }
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    })
+
+  })
 </script>
-  </body>
+
+<script>
+  /*$(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     *
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+
+    var areaChartData = {
+      labels  : ['STD 1', 'STD 2', 'STD3','STD4','STD5','STD6','STD7','STD8'],
+      datasets: [
+        {
+          label               : 'Female',
+          backgroundColor     : 'rgba(26,187,156,0.9)',
+          borderColor         : 'rgba(26,187,156,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(26,187,156,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(26,187,156,1)',
+          data                : [28, 48, 40, 19, 86, 27, 90,70]
+        },
+        {
+          label               : 'Male',
+          backgroundColor     : 'rgba(60,141,188, 0.9)',
+          borderColor         : 'rgba(60,141,188, 0.8)',
+          pointRadius         : false,
+          pointColor          : 'rgba(60,141,188, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81, 56, 55, 40,40]
+        }
+      ]
+    }
+
+    var barChartCanvas = $('#barChart').get(0).getContext('2d')
+    var barChartData = $.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    })
+
+  })
+
+  const urlParams = new URLSearchParams(window.location.search);
+  sessionStorage.setItem('school_type', urlParams.get('school_type'));*/
+</script>
+
+
+
+
+
+
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+
+    var areaChartDataPrimary = {
+      labels  : ['STD 1', 'STD 2', 'STD3','STD4','STD5','STD6','STD7','STD8'],
+      datasets: [
+        {
+          label               : 'Attendance',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [28, 48, 40, 19, 86, 27, 90,70]
+        },
+        {
+          label               : 'Enrollment',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81, 56, 55, 40,40]
+        }
+      ]
+    }
+    
+
+    var areaChartDataSecondary = {
+      labels  : ['FORM1', 'FORM2', 'FORM3','FORM4'],
+      datasets: [
+        {
+          label               : 'Female',
+          backgroundColor     : 'rgba(26,187,156,0.9)',
+          borderColor         : 'rgba(26,187,156,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(26,187,156,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(26,187,156,1)',
+          data                : [28, 48, 40, 19]
+        },
+        {
+          label               : 'Male',
+          backgroundColor     : 'rgba(60,141,188, 0.9)',
+          borderColor         : 'rgba(60,141,188, 0.8)',
+          pointRadius         : false,
+          pointColor          : 'rgba(60,141,188, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [65, 59, 80, 81]
+        }
+      ]
+    }
+
+    var schoolType = null;
+    const urlParams = new URLSearchParams(window.location.search);
+    const schoolTypeParam = urlParams.get('school_type');
+    if (schoolTypeParam === 'primary' || schoolTypeParam === 'secondary') {
+      schoolType = schoolTypeParam;
+    } else {
+      // Default to primary if the school type is not specified or invalid
+      schoolType = 'primary';
+    }
+
+    var areaChartCanvas = $('#stackChart').get(0).getContext('2d');
+    var areaChartData = schoolType === 'primary' ? areaChartDataPrimary : areaChartDataSecondary;
+
+    new Chart(areaChartCanvas, {
+      type: 'bar',
+      data: areaChartData,
+      options: {
+        responsive              : true,
+        maintainAspectRatio     : false,
+        datasetFill             : false
+      }
+    });
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $('#barChart').get(0).getContext('2d');
+    var barChartDataPrimary = $.extend(true, {}, areaChartDataPrimary);
+    var barChartDataSecondary = $.extend(true, {}, areaChartDataSecondary);
+
+    var temp0Primary = areaChartDataPrimary.datasets[0];
+    var temp1Primary = areaChartDataPrimary.datasets[1];
+    barChartDataPrimary.datasets[0] = temp1Primary;
+    barChartDataPrimary.datasets[1] = temp0Primary;
+
+    var temp0Secondary = areaChartDataSecondary.datasets[0];
+    var temp1Secondary = areaChartDataSecondary.datasets[1];
+    barChartDataSecondary.datasets[0] = temp1Secondary;
+    barChartDataSecondary.datasets[1] = temp0Secondary;
+
+    var barChartData = schoolType === 'primary' ? barChartDataPrimary : barChartDataSecondary;
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false,
+      scales: {
+        xAxes: [{
+          stacked: true // this should be set to make the bars stacked
+        }],
+        yAxes: [{
+          stacked: true // this also..
+        }]
+      }
+    }
+
+    new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    });
+  })
+</script>
+
+
+
+</body>
 </html>
