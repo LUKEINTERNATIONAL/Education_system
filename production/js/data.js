@@ -1,9 +1,15 @@
 var student_primary_data = [
     [
+<<<<<<< HEAD
         
         '<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         '<div class="avatar"><span>CB</span></div>',
         'Shammah Chigwazi',
+=======
+        '<div class="avatar"><span>SC</span></div>',
+        //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
+        'Japhet Nyirongo',
+>>>>>>> 26debe26e083f010076f413f130e41f3fd73cb2d
         '45636',
         'STD1',
         'M',
@@ -13,8 +19,6 @@ var student_primary_data = [
         '<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>'
     ],
     [
-        
-        '<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         '<div class="avatar"><span>CB</span></div>',
         //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         'Catherine Banda',
@@ -228,8 +232,8 @@ var student_primary_data = [
 
 var student_secondary_data = [
     [
-        
-        '<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
+        '<div class="avatar"><span>CB</span></div>',
+        //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         'Shammah Chigwazi',
         '45636',
         'Form1',
@@ -240,7 +244,7 @@ var student_secondary_data = [
         '<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#profileModal"><i class="fa fa-folder"></i> View </a>'
     ],
     [
-        '<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
+        //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         '<div class="avatar"><span>CB</span></div>',
         //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         'Catherine Banda',
