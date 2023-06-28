@@ -2,6 +2,7 @@ var student_primary_data = [
     [
         
         '<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
+        '<div class="avatar"><span>CB</span></div>',
         'Shammah Chigwazi',
         '45636',
         'STD1',
