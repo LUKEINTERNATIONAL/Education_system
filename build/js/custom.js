@@ -700,16 +700,16 @@ function init_chart_doughnut() {
                     "STD 8"
                 ],
                 datasets: [{
-                    data: [15, 20, 30, 10, 30,5,15,40],
+                    data: schoolType === 'primary' ? [15, 20, 30, 10, 30,5,15,40] : [15, 20, 30, 10],
                     backgroundColor: [
                         "#BDC3C7",
                         "#9B59B6",
                         "#E74C3C",
                         "#26B99A",
                         "#3498DB",
-                        "#3498DB",
-                        "#3498DB",
-                        "#3498DB",
+                        "#00FFEA",
+                        "#F5C148",
+                        "#202020",
                     ],
                     hoverBackgroundColor: [
                         "#CFD4D8",
@@ -2276,9 +2276,9 @@ function init_charts() {
 
     // Doughnut chart
 
-    if ($('#canvasDoughnut').length) {
+    if ($('#canvasDoughnut22').length) {
 
-        var ctx = document.getElementById("canvasDoughnut");
+        var ctx = document.getElementById("canvasDoughnut22");
         var data = {
             labels: [
                 "STD 1",

@@ -4,7 +4,8 @@ class Bars extends HTMLElement{
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><img src="/production/images/logo.png" width="25px" /> <span>School level </span></a>
+              <a href="index.html" class="site_title"><img src="/production/images/logo.png" width="25px" /> <span>
+              ${sessionStorage.getItem('school_type')=='primary' ? 'CCAP Primary' : 'Katoto Secondary'} </span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -29,7 +30,7 @@ class Bars extends HTMLElement{
                       <li><a href="/production/school_level/student/manage_assessment.html">Manage Assesment</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Schools <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-building"></i> Schools <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="/production/school_level/school/manage_school.html">Manage School</a></li>
                     </ul>
