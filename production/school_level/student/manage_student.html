@@ -1083,21 +1083,46 @@
 
 
 	<script>
-		function getRandomColor() {
-		  var letters = '0123456789ABCDEF';
-		  var color = '#';
-		  for (var i = 0; i < 6; i++) {
-			color += letters[Math.floor(Math.random() * 16)];
-		  }
-		  return color;
+		
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+			}
+
+		// Function to apply random colors to avatars
+			function applyRandomColors() {
+				var avatars = document.querySelectorAll('.avatar');
+					avatars.forEach(function (avatar) {
+					avatar.style.backgroundColor = getRandomColor();
+				});
+			}
+
+		// Apply random colors to existing avatars
+			document.addEventListener('DOMContentLoaded', function () {
+				applyRandomColors();
+			});
+
+		/* Apply random colors when new content is loaded
+		document.addEventListener('#####', function () {
+		applyRandomColors();
+		}); */
+
+
+		// Create a MutationObserver
+		const observer = new MutationObserver(function (mutationsList, observer) {
+		for (const mutation of mutationsList) {
+			if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+				applyRandomColors();
+			}
 		}
-	
-		document.addEventListener('DOMContentLoaded', function() {
-		  var avatars = document.querySelectorAll('.avatar');
-		  avatars.forEach(function(avatar) {
-			avatar.style.backgroundColor = getRandomColor();
-		  });
 		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
+		//End of Avatar colors section
 	</script>
 
 	<script>
@@ -1193,4 +1218,5 @@
 
 	</script>
 
-</body></html>
+</body>
+</html>
