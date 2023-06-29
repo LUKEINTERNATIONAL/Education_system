@@ -86,7 +86,6 @@
                   </div>
                   <div class="x_content">
 
-
                     <!-- Smart Wizard -->
                       <div id="wizard" class="form_wizard wizard_horizontal">
                       <ul class="wizard_steps">
@@ -470,8 +469,8 @@
                 <div class="container cropper">
                   <div class="row">   
                     <div class="col-md-9">
-                      <div class="img-container">
-                        <img id="image" src="/production/images/cropper.jpg" alt="Picture">
+                      <div class="img-container" id="captured_image">
+                        <img id="image" src="" alt="Picture">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -542,7 +541,7 @@
                       </div>
 
                       <div class="dropup docs-options">
-                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" >
+                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" onclick="openCamera()" data-toggle="modal" data-target=".bs-camera-modal">
                           Open Camera
                         </button>
                         <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
@@ -890,6 +889,24 @@
 		</div>
 	</div>
 
+
+  <!-- Continuous modal -->
+  <div class="modal fade bs-camera-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+          
+          
+        <div class="modal-footer" style="padding: 0.3rem;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="captureBtn">Capture</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /modals -->
 	<script src="/componets/bars.js"></script>
     <!-- jQuery -->
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
@@ -935,6 +952,49 @@
   <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
   <!-- Custom Theme Scripts -->
   <script src="/build/js/custom.js"></script>
+  <script >
+
+    let stream; // Store the media stream
+    // Function to capture the image
+    function captureImage() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      // Draw the video frame onto the canvas
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Convert the canvas content to a data URL
+      var imageDataUrl = canvas.toDataURL('image/png');
+
+      // Open the image in a new tab (optional)
+      // var imageWindow = window.open();
+      $('#captured_image').html('<img id="image"  src="' + imageDataUrl + '"/>')
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    }
+
+    function openCamera(){
+      // Event listener for the capture button
+      document.getElementById('captureBtn').addEventListener('click', captureImage);
+
+      // Access the camera stream
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          var video = document.getElementById('video');
+          video.srcObject = stream;
+
+          video.play();
+
+          stream = mediaStream; // Store the media stream
+        })
+        .catch(function(error) {
+          console.error('Error accessing the camera:', error);
+        });
+    }
+  </script>
+
 	
   </body>
 </html>
