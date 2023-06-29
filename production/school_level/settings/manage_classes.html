@@ -73,12 +73,13 @@
 									<div class="col-md-4 col-sm-2 ">
 										<a href="#" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus"></i> Add </a>
 									</div>
+
 								</div>
 								<div class="x_content">
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="card-box table-responsive">
-												<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+												<table id="manage_classes_table" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 													<thead class="bg-dark text-white">
 														<tr>
 														<th>Name</th>
@@ -243,5 +244,42 @@
 	<script src="/vendors/starrr/dist/starrr.js"></script>
 	<!-- Custom Theme Scripts -->
 	<script src="/build/js/custom.min.js"></script>
+	<script src="/production/data/manage_classes_data.js"></script>
+
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+			color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+	
+		document.addEventListener('DOMContentLoaded', function() {
+		  var avatars = document.querySelectorAll('.avatar');
+		  avatars.forEach(function(avatar) {
+			avatar.style.backgroundColor = getRandomColor();
+		  });
+		});
+
+
+		function display_data(data) {
+						var datatable = $("#manage_classes_table").dataTable().api();
+						datatable.clear();
+						datatable.rows.add(data);
+						datatable.draw();
+						};
+
+	   $(function() {
+						$("#manage_classes_table").DataTable()
+					});
+					if (sessionStorage.getItem('school_type')=='primary')
+						display_data(student_primary_data)
+					else
+						display_data(student_secondary_data)
+	</script>
+	
+
 
 </body></html>
