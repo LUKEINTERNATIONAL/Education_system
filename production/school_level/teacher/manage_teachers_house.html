@@ -9,6 +9,7 @@
 
 	<title>Education System</title>
 
+
 	<!-- Bootstrap -->
 	<link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font Awesome -->
@@ -73,7 +74,7 @@
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="card-box table-responsive">
-												<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+												<table id="teachers_houses_table" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 													<thead class="bg-dark text-white">
 														<tr>
 														<th>Image</th>
@@ -304,5 +305,40 @@
 	<script src="/vendors/starrr/dist/starrr.js"></script>
 	<!-- Custom Theme Scripts -->
 	<script src="/build/js/custom.min.js"></script>
+	<script src="/production/data/manage_teachers_houses_data.js"></script>
+
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+			color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+	
+		document.addEventListener('DOMContentLoaded', function() {
+		  var avatars = document.querySelectorAll('.avatar');
+		  avatars.forEach(function(avatar) {
+			avatar.style.backgroundColor = getRandomColor();
+		  });
+		});
+
+
+		function display_data(data) {
+						var datatable = $("#teachers_houses_table").dataTable().api();
+						datatable.clear();
+						datatable.rows.add(data);
+						datatable.draw();
+						};
+
+	   $(function() {
+						$("#teachers_houses_table").DataTable()
+					});
+					if (sessionStorage.getItem('school_type')=='primary')
+						display_data(student_primary_data)
+					else
+						display_data(student_secondary_data)
+	</script>
 
 </body></html>
