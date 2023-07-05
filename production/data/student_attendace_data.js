@@ -101,7 +101,7 @@ var student_primary_data = [
         'M',
         `<div class="checkbox">
             <label>
-            <input type="checkbox" class="flat"> 
+            <input type="checkbox" class="flat icheckbox_flat-green "> 
             </label>
         </div>`       
         
