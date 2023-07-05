@@ -369,7 +369,28 @@
 									  </button>
 									</div>
 									<div class="modal-body">
-									  <p>Are you sure you want to deactivate your profile?</p>
+									  <h6>Reason for student deactivation ?</h6>
+									  <div class="form-check mb-2">
+										<input class="form-check-input" type="radio" name="option" id="option1" value="Death">
+										<label class="form-check-label " for="option1">
+										  Death:
+										</label>
+									  </div>
+									  <div class="form-check">
+											<input class="form-check-input" type="radio" name="option" id="option2" value="Dropout">
+											<label class="form-check-label" for="option2">
+											Dropout (state reason for dropout)
+											</label>
+									  </div>
+									  
+									  <div class="form-group mt-2">
+												<select class="form-control" id="dropdown" disabled>
+														<option value="">Dropout reason</option>
+														<option value="option1">Marriage</option>
+														<option value="option2">lack of fees</option>
+														<option value="option3">Illiness</option>
+												</select>
+									  </div>
 									</div>
 									<div class="modal-footer">
 									  <button type="button" class="btn btn-secondary" onclick="close_modal('deactivateModal') ">Cancel</button>
@@ -1080,7 +1101,17 @@
 	<script src="/build/js/custom.min.js"></script>
 	<script src="/production/data/student_management_data.js"></script>
 
-
+	<script>
+		// Enable/disable the dropdown based on the selected radio button
+		const radioButtons = document.getElementsByName("option");
+		const dropdown = document.getElementById("dropdown");
+	
+		for (let i = 0; i < radioButtons.length; i++) {
+		  radioButtons[i].addEventListener("change", function() {
+			dropdown.disabled = (this.value !== "Dropout");
+		  });
+		}
+	  </script>
 
 	<script>
 		
@@ -1183,21 +1214,21 @@
 						});
 					   }
 
-					   function getRandomColor() {
-		  var letters = '0123456789ABCDEF';
-		  var color = '#';
-		  for (var i = 0; i < 6; i++) {
-			color += letters[Math.floor(Math.random() * 16)];
-		  }
-		  return color;
-		}
+		    function getRandomColor() {
+						var letters = '0123456789ABCDEF';
+						var color = '#';
+						for (var i = 0; i < 6; i++) {
+							color += letters[Math.floor(Math.random() * 16)];
+						}
+						return color;
+						}
 
-		document.addEventListener('DOMContentLoaded', function() {
-		  var avatars = document.querySelectorAll('.avatar');
-		  avatars.forEach(function(avatar) {
-			avatar.style.backgroundColor = getRandomColor();
-		  });
-		});
+		    document.addEventListener('DOMContentLoaded', function() {
+						var avatars = document.querySelectorAll('.avatar');
+						avatars.forEach(function(avatar) {
+							avatar.style.backgroundColor = getRandomColor();
+						});
+						});
 
 			function deactivateProfile() {
 						// Hide the profile modal
@@ -1208,12 +1239,12 @@
 						}
 
 			$(function() {
-						$("#manage_student_table").DataTable()
-					});
-					if (sessionStorage.getItem('school_type')=='primary')
-						display_data(student_primary_data)
-					else
-						display_data(student_secondary_data)
+							$("#manage_student_table").DataTable()
+						});
+						if (sessionStorage.getItem('school_type')=='primary')
+							display_data(student_primary_data)
+						else
+							display_data(student_secondary_data)
 
 
 	</script>

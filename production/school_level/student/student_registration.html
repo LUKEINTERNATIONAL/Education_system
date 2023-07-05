@@ -38,17 +38,25 @@
 
     <!-- Custom Theme Style -->
     <link href="/build/css/custom.css" rel="stylesheet">
-    <style>
-      .form_wizard .stepContainer {
-          overflow-x: unset;
-      }
 
-      #step-2{
-        overflow: unset;
-        max-height: 600px;
-      }
+    <style>
+
+            .form_wizard .stepContainer {
+                  overflow-x: unset;
+                  }
+
+            #step-2{
+                overflow: unset;
+                max-height: 600px;
+                }
+
+            input[type='radio']{
+                background-color: rgb(14, 230, 230);
+                color: rgb(26, 219, 219);
+                }   
 
     </style>
+
   </head>
 
   <body class="nav-md">
@@ -87,7 +95,6 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
 
                     <!-- Smart Wizard -->
                       <div id="wizard" class="form_wizard wizard_horizontal">
@@ -237,46 +244,52 @@
                             </div>                            
                           </div>
                           <div style="font-size:15px">
-                            <div class="row">
+                            <div class="row mb-2">
                               <div class="col-md-12 col-sm-12 form-group has-feedback">
                                 <p>
-                                  <label style="margin-right:105px; font-weight:700;color:#424242">Gender *:</label>
-                                  M: <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> 
-                                  F: <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                                  <label style="margin-right:95px; font-weight:700;color:#424242">Gender *:</label>
+                                  M: <input type="radio"  name="gender" id="genderM" value="M" checked="" required /> 
+                                  F: <input type="radio" name="gender" id="genderF" value="F" />
                                 </p>
                               </div>
                             </div>
-                            <div class="row">
+
+                            <div class="row mb-2">
                               <div class="col-md-12 col-sm-12 form-group has-feedback">
                                 <p>
-                                  <label style="margin-right:60px; font-weight:700;color:#424242">Has Disablity *: </label>
-                                  Yes: <input type="radio" class="flat" name="disable" id="genderM" value="Yes" checked  required /> 
-                                  No: <input type="radio" class="flat" name="disable" id="genderF" value="No" />
+                                  <label style="margin-right:53px; font-weight:700;color:#424242">Vulnerable *:</label>
+                                  Yes: <input type="radio"  name="vulnerable" id="vulnerableYes" value="yes" checked="" required /> 
+                                  No: <input type="radio" name="vulnerable" id="vulnerableNo" value="no" />
                                 </p>
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-md-12 col-sm-12 form-group has-feedback">
+                            
+                            <div class="row mb-2">
+                              <div class="col-md-3 col-sm-2 form-group has-feedback" >
                                 <p>
                                   <label style="margin-right:100px; font-weight:700;color:#424242">Opharn *: </label>
-                                  Yes: <input type="radio" class="flat" name="opharn" id="genderM" value="Yes" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="opharn" id="genderF" value="No" />
+                                  Yes: <input type="radio" class="flat" name="opharn" id="genderM" value="M" checked="" required /> 
+                                  No: <input type="radio" class="flat" name="opharn" id="genderF" value="F" />
                                 </p>
                               </div>
+                              <div class="col-md-3 col-sm-2  form-group has-feedback" >
+                                <input type="text" class="form-control has-feedback-left" id="discription" placeholder="Discription of disability"disabled >
+                                <span class="fa fa-check form-control-feedback left" aria-hidden="true"></span>
+                              </div>
                             </div>
-                            <div class="row">
-                              <div class="col-md-12 col-sm-12 form-group has-feedback">
+                            <div class="row mb-2">
+                              <div class="col-md-3 col-sm-2 form-group has-feedback">
                                 <p>
                                   <label style="margin-right:75px; font-weight:700;color:#424242">On Bursary*: </label>
-                                  Yes: <input type="radio" class="flat" name="gender3" id="genderM" value="Yes" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="gender3" id="genderF" value="No" />
+                                  Yes: <input type="radio" class="flat" name="gender3" id="genderM" value="M" checked="" required /> 
+                                  No: <input type="radio" class="flat" name="gender3" id="genderF" value="F" />
                                 </p>
                               </div>
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col-md-4 col-sm-2  form-group has-feedback" id="inputSuccess2">
-                              <input type="text" class="form-control has-feedback-left" placeholder="Discription of disability">
+                            <div class="col-md-4 col-sm-2  form-group has-feedback">
+                              <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Discription of disability">
                               <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                             </div>
                             <div class="col-md-4 col-sm-2  form-group has-feedback">
@@ -306,21 +319,45 @@
                                 <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness">
                               </div>
                             </div>
+                            
+                            <!--<div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Attach Supporting Document</label>
+                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
+                              --<span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>--
+                            </div>-->
+                            
                             <div class="col-md-4 col-sm-2 form-group has-feedback">
                               <label for="inputSuccess5">Bursary Type</label>
                               <div class="input-group">
                                 <span class="input-group-addon">
                                   <span class="fa fa-envelope" aria-hidden="true"></span>
                                 </span>
-                                <select class="form-control has-feedback-left" id="inputSuccess2">
+                                <select class="form-control has-feedback-left" id="bursaryType" disabled >
                                   <option disabled selected value="">Type Bursary</option>
                                   <option value="AK">Government</option>
                                   <option value="HI">Luke International</option>
                                 </select>
                               </div>
                             </div>
+                          
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <span class="fa fa-phone" aria-hidden="true"></span>
+                                </span>
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness" disabled >
+                              </div>
+                            </div>
                             
-                          </div>
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Attach Supporting Document</label>
+                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
+                              --<span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>--
+                            </div>
+                            
+
+                            
+                          </div>-->
                         </form>
 
                       </div>
@@ -465,8 +502,8 @@
                 <div class="container cropper">
                   <div class="row">   
                     <div class="col-md-9">
-                      <div class="img-container">
-                        <img id="image" src="/production/images/cropper.jpg" alt="Picture">
+                      <div class="img-container" id="captured_image">
+                        <img id="image" src="" alt="Picture">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -537,7 +574,7 @@
                       </div>
 
                       <div class="dropup docs-options">
-                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" >
+                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" onclick="openCamera()" data-toggle="modal" data-target=".bs-camera-modal">
                           Open Camera
                         </button>
                         <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
@@ -878,6 +915,24 @@
 		</div>
 	</div>
 
+
+  <!-- Continuous modal -->
+  <div class="modal fade bs-camera-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+          
+          
+        <div class="modal-footer" style="padding: 0.3rem;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="captureBtn">Capture</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /modals -->
 	<script src="/componets/bars.js"></script>
     <!-- jQuery -->
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
@@ -923,6 +978,36 @@
   <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
   <!-- Custom Theme Scripts -->
   <script src="/build/js/custom.js"></script>
+  
+
+
+  <script>
+    function enableElement(inputId, targetId) {
+        const radioButtons = document.querySelectorAll(`input[name="${inputId}"]`);
+        const targetElement = document.getElementById(targetId);
+  
+        if (radioButtons.length === 0 || !targetElement) {
+            console.error("Error: Invalid input or target element ID");
+            return;
+        }
+      
+        radioButtons.forEach(function(radioButton) {
+            radioButton.addEventListener("change", function() {
+                targetElement.disabled = (this.value !== "yes");
+            });
+        });
+    }
+  
+    // Example usage
+    enableElement("disabled", "discription"); 
+    enableElement("opharn", "dropdown");
+    enableElement("bursary", "bursaryType");
+    enableElement("health", "inputSuccess5");
+  </script>
+  
+
+
+
 	
 
   
