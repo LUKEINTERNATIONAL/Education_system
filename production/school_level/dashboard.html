@@ -274,16 +274,12 @@
     </div>
     
     <script >
-       const urlParams = new URLSearchParams(window.location.search);
-        sessionStorage.setItem('school_type', urlParams.get('school_type'));
-        var schoolType = null;
-        const schoolTypeParam = urlParams.get('school_type');
-        if (schoolTypeParam === 'primary' || schoolTypeParam === 'secondary') {
-          schoolType = schoolTypeParam;
-        } else {
-          // Default to primary if the school type is not specified or invalid
-          schoolType = 'primary';
-        }
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.get('school_type'))
+          sessionStorage.setItem('school_type', urlParams.get('school_type'));
+      
+        schoolType = sessionStorage.getItem('school_type')
+
     </script>
     <script src="/componets/bars.js"></script>
     <!-- jQuery -->

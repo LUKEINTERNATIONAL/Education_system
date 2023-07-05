@@ -94,7 +94,6 @@
                   </div>
                   <div class="x_content">
 
-
                     <!-- Smart Wizard -->
                       <div id="wizard" class="form_wizard wizard_horizontal">
                       <ul class="wizard_steps">
@@ -528,8 +527,8 @@
                 <div class="container cropper">
                   <div class="row">   
                     <div class="col-md-9">
-                      <div class="img-container">
-                        <img id="image" src="/production/images/cropper.jpg" alt="Picture">
+                      <div class="img-container" id="captured_image">
+                        <img id="image" src="" alt="Picture">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -600,7 +599,7 @@
                       </div>
 
                       <div class="dropup docs-options">
-                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" >
+                        <button type="button" class="btn btn-primary btn-block dropdown-toggle" onclick="openCamera()" data-toggle="modal" data-target=".bs-camera-modal">
                           Open Camera
                         </button>
                         <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
@@ -948,6 +947,24 @@
 		</div>
 	</div>
 
+
+  <!-- Continuous modal -->
+  <div class="modal fade bs-camera-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+          
+          
+        <div class="modal-footer" style="padding: 0.3rem;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="captureBtn">Capture</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /modals -->
 	<script src="/componets/bars.js"></script>
     <!-- jQuery -->
     <script src="/vendors/jquery/dist/jquery.min.js"></script>
