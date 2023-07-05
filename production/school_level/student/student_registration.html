@@ -266,10 +266,11 @@
                             
                             <div class="row mb-2">
                               <div class="col-md-3 col-sm-2 form-group has-feedback" >
+
                                 <p>
-                                  <label style="margin-right:100px; font-weight:700;color:#424242">Opharn *: </label>
-                                  Yes: <input type="radio" class="flat" name="opharn" id="genderM" value="M" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="opharn" id="genderF" value="F" />
+                                  <label style="margin-right:38px; font-weight:700;color:#424242">Has Disablity *: </label>
+                                  Yes: <input type="radio"  name="disabled" id="disabilityYes" value="yes" /> 
+                                  No: <input type="radio"  name="disabled" id="disabilityNo" value="no" />
                                 </p>
                               </div>
                               <div class="col-md-3 col-sm-2  form-group has-feedback" >
@@ -280,20 +281,77 @@
                             <div class="row mb-2">
                               <div class="col-md-3 col-sm-2 form-group has-feedback">
                                 <p>
-                                  <label style="margin-right:75px; font-weight:700;color:#424242">On Bursary*: </label>
-                                  Yes: <input type="radio" class="flat" name="gender3" id="genderM" value="M" checked="" required /> 
-                                  No: <input type="radio" class="flat" name="gender3" id="genderF" value="F" />
+                                  <label style="margin-right:75px; font-weight:700;color:#424242">Opharn *: </label>
+                                  Yes: <input type="radio"  name="opharn" id="opharnYes" value="yes"  /> 
+                                  No: <input type="radio" name="opharn" id="opharnNo" value="no" />
                                 </p>
+                              </div>
+                              <div class="col-md-3 col-sm-2  form-group has-feedback">
+                                <select class="form-control has-feedback-left" id="dropdown" disabled >
+                                  <option disabled selected value="">Deceased Parent</option>
+                                  <option value="AK">Father</option>
+                                  <option value="HI">Mother</option>
+                                  <option value=" ">Both</option>
+                                </select>
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                              </div>
+                            </div>
+                            <div class="row mb-2">
+                              <div class="col-md-3 col-sm-2 form-group has-feedback">
+                                <p>
+                                  <label style="margin-right:55px; font-weight:700;color:#424242">On Bursary*: </label>
+                                  Yes: <input type="radio"  name="bursary" id="bursaryYes" value="yes"  /> 
+                                  No: <input type="radio" name="bursary" id="bursaryNo" value="no" />
+                                </p>
+                              </div>
+                              <div class="col-md-3 col-sm-2  form-group has-feedback" >
+                                <input type="text" class="form-control has-feedback-left" id="discription" placeholder="Discription of disability"disabled >
+                                <span class="fa fa-check form-control-feedback left" aria-hidden="true"></span>
+                              </div>
+                            </div>
+                            <div class="row mb-2">
+
+                              <div class="col-md-3 col-sm-2 form-group has-feedback">
+                                <!--<label for="inputSuccess5">Bursary Type</label>-->
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                                  </span>
+                                  <select class="form-control has-feedback-left" id="bursaryType" disabled >
+                                    <option disabled selected value="">Type Bursary</option>
+                                    <option value="AK">Government</option>
+                                    <option value="HI">Luke International</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3 col-sm-2 form-group has-feedback">
+                                <p>
+                                  <label style="margin-right: 10px; font-weight:700;color:#424242">Health status*: </label>
+                                  Sick: <input type="radio" name="health" id="sick" value="yes" />
+                                  Healthy: <input type="radio"  name="health" id="healthy" value="no" />          
+                                </p>
+                              </div>
+
+                              <div class="col-md-3 col-sm-2 form-group has-feedback">
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <span class="fa fa-envelope" aria-hidden="true"></span>
+                                  </span>
+                                  <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness" disabled >
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Discription of disability">
+                         <!--- <div class="row">
+
+                            <div class="col-md-4 col-sm-2  form-group has-feedback" >
+                              <input type="text" class="form-control has-feedback-left" id="discription" placeholder="Discription of disability"disabled >
                               <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                             </div>
                             <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <select class="form-control has-feedback-left" id="inputSuccess2">
+                              <select class="form-control has-feedback-left" id="dropdown" disabled >
                                 <option disabled selected value="">Deceased Parent</option>
                                 <option value="AK">Father</option>
                                 <option value="HI">Mother</option>
@@ -301,31 +359,7 @@
                               </select>
                               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                             </div>
-                            <div class="col-md-4 col-sm-2  form-group has-feedback">
-                              <select class="form-control has-feedback-left" id="inputSuccess2">
-                                <option disabled selected value="">Student Health Status</option>
-                                <option value="AK">Healthy</option>
-                                <option value="HI">Sick</option>
-                              </select>
-                              <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                            </div>
-                          
-                            <div class="col-md-4 col-sm-2 form-group has-feedback">
-                              <label for="inputSuccess5">Specify Illness</label>
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <span class="fa fa-phone" aria-hidden="true"></span>
-                                </span>
-                                <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness">
-                              </div>
-                            </div>
-                            
-                            <!--<div class="col-md-4 col-sm-2 form-group has-feedback">
-                              <label for="inputSuccess5">Attach Supporting Document</label>
-                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
-                              --<span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>--
-                            </div>-->
-                            
+
                             <div class="col-md-4 col-sm-2 form-group has-feedback">
                               <label for="inputSuccess5">Bursary Type</label>
                               <div class="input-group">
@@ -352,9 +386,39 @@
                             <div class="col-md-4 col-sm-2 form-group has-feedback">
                               <label for="inputSuccess5">Attach Supporting Document</label>
                               <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
+                              <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>-->
+                            
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Bursary Type</label>
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <span class="fa fa-envelope" aria-hidden="true"></span>
+                                </span>
+                                <select class="form-control has-feedback-left" id="bursaryType" disabled >
+                                  <option disabled selected value="">Type Bursary</option>
+                                  <option value="AK">Government</option>
+                                  <option value="HI">Luke International</option>
+                                </select>
+                              </div>
+
+                            </div>
+                          
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <span class="fa fa-phone" aria-hidden="true"></span>
+                                </span>
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Specify Illness" disabled >
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-2 form-group has-feedback">
+                              <label for="inputSuccess5">Attach Supporting Document</label>
+                              <input type="file" class="form-control has-feedback-lefts" id="inputSuccess5" placeholder="">
                               --<span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>--
                             </div>
-                            
+
 
                             
                           </div>-->
@@ -978,7 +1042,6 @@
   <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
   <!-- Custom Theme Scripts -->
   <script src="/build/js/custom.js"></script>
-  
 
 
   <script>
@@ -1004,7 +1067,54 @@
     enableElement("bursary", "bursaryType");
     enableElement("health", "inputSuccess5");
   </script>
+   <script >
+
+    let stream; // Store the media stream
+    // Function to capture the image
+    function captureImage() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      // Draw the video frame onto the canvas
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Convert the canvas content to a data URL
+      var imageDataUrl = canvas.toDataURL('image/png');
+
+      // Open the image in a new tab (optional)
+      // var imageWindow = window.open();
+      $('#captured_image').html('<img id="image"  src="' + imageDataUrl + '"/>')
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    }
+
+    function enableElement(inputId, targetId) {
+        const radioButtons = document.querySelectorAll(`input[name="${inputId}"]`);
+        const targetElement = document.getElementById(targetId);
   
+        if (radioButtons.length === 0 || !targetElement) {
+            console.error("Error: Invalid input or target element ID");
+            return;
+        }
+      
+        radioButtons.forEach(function(radioButton) {
+            radioButton.addEventListener("change", function() {
+                targetElement.disabled = (this.value !== "yes");
+            });
+        });
+    }
+  
+    // Example usage
+    enableElement("disabled", "discription"); 
+    enableElement("opharn", "dropdown");
+    enableElement("bursary", "bursaryType");
+    enableElement("health", "inputSuccess5");
+  </script>
+  
+
+
 
 
 
