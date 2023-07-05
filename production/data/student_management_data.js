@@ -225,7 +225,7 @@ var student_primary_data = [
 
 var student_secondary_data = [
     [
-        '<div class="avatar"><span>CB</span></div>',
+        '<div class="avatar"><span>SC</span></div>',
         //'<img src="/production/images/user.png" class="rounded-circle img-fluid border border-white border-4" style="width: 50px;" alt="" width="50">',
         'Shammah Chigwazi',
         '45636',
