@@ -1036,7 +1036,48 @@
     enableElement("bursary", "bursaryType");
     enableElement("health", "inputSuccess5");
   </script>
-  
+   <script >
+
+    let stream; // Store the media stream
+    // Function to capture the image
+    function captureImage() {
+      var video = document.getElementById('video');
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+
+      // Draw the video frame onto the canvas
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Convert the canvas content to a data URL
+      var imageDataUrl = canvas.toDataURL('image/png');
+
+      // Open the image in a new tab (optional)
+      // var imageWindow = window.open();
+      $('#captured_image').html('<img id="image"  src="' + imageDataUrl + '"/>')
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    }
+
+    function openCamera(){
+      // Event listener for the capture button
+      document.getElementById('captureBtn').addEventListener('click', captureImage);
+
+      // Access the camera stream
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          var video = document.getElementById('video');
+          video.srcObject = stream;
+
+          video.play();
+
+          stream = mediaStream; // Store the media stream
+        })
+        .catch(function(error) {
+          console.error('Error accessing the camera:', error);
+        });
+    }
+  </script>
 
 
 
